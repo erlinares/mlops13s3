@@ -1,0 +1,5 @@
+project_id = "proyecto-ai-13-agente-bq"
+dataset_id = "testing_github"
+table_id = "census_by_age"
+region     = "US"
+routine_id = "cencus_filter_by_age"

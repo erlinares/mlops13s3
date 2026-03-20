@@ -1,0 +1,6 @@
+gcloud run jobs deploy run-pipeline-job \
+  --image us-central1-docker.pkg.dev/$GOOGLE_PROJECT/$IMAGE_REPOSITORY/$IMAGE_NAME \
+  --region $REGION \
+  --service-account <CLOUDRUN_SA> \
+  --set-env-vars PROJECT_ID=mlops13,LOCATION=us-central1,PIPELINE_PATH=gs://BUCKET/pipeline_bigquery.json,SERVICE_ACCOUNT=vertex-process@mlops13.iam.gserviceaccount.com,VALIDA_TABLE=mlops13.github_mlops.census_by_age,INPUT_AGE=60 \
+  --quiet
